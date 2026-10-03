@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Subin Biju · AI/ML & Computer Vision Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F4F7;--surface:#FFFFFF;--ink:#101827;--muted:#556071;--line:#CBD3DD;--accent:#1F5EFF;--on-accent:#fff;
+--head:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1320;--surface:#141C2E;--ink:#E8EDF5;--muted:#9AA6B8;--line:#2A3550;--accent:#6D9BFF;--on-accent:#0D1320}}
+:root[data-theme="dark"]{--bg:#0D1320;--surface:#141C2E;--ink:#E8EDF5;--muted:#9AA6B8;--line:#2A3550;--accent:#6D9BFF;--on-accent:#0D1320}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-weight:500}
+nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{padding:4rem 0 5rem}
+.frame{position:relative;display:inline-block;padding:.4rem 1.2rem 1rem .9rem;border:2px solid var(--accent);margin-top:1.6rem}
+.tag{position:absolute;top:-1.55rem;left:-2px;background:var(--accent);color:var(--on-accent);font-size:.8rem;font-weight:500;padding:.15rem .6rem}
+.frame i{position:absolute;width:10px;height:10px;background:var(--bg);border:2px solid var(--accent)}
+.frame i:nth-of-type(1){right:-7px;top:-7px}.frame i:nth-of-type(2){left:-7px;bottom:-7px}.frame i:nth-of-type(3){right:-7px;bottom:-7px}
+h1{font:700 clamp(2.8rem,9vw,6rem)/1 var(--head);letter-spacing:-.03em;margin:0}
+.lead{max-width:36rem;font-size:1.2rem;color:var(--muted);margin:2rem 0 2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.3rem;font-weight:500;text-decoration:none;border:1.5px solid var(--ink);border-radius:4px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{opacity:.85}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 2rem/1.15 var(--head);letter-spacing:-.02em;margin:0 0 2rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;max-width:34rem}
+.facts{margin:0;display:grid;gap:1rem}
+.facts dt{font-weight:500}.facts dd{margin:0;color:var(--muted)}
+.proj{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding:1.6rem 0;border-top:1px solid var(--line)}
+.proj.nb{border-top:0;padding-top:0}.proj[hidden]{display:none}
+.when{color:var(--muted);font-size:.9rem}
+h3{font:700 1.35rem/1.25 var(--head);margin:0 0 .5rem}
+.proj p{margin:0 0 .8rem;max-width:40rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0;list-style:none}
+.chips li{font-size:.85rem;padding:.15rem .6rem;border:1px solid var(--line);background:var(--surface);border-radius:99px}
+.result{font-weight:500;color:var(--accent)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 2.5rem}
+.skills h3{font-size:1.05rem}
+.timeline{display:grid;gap:1.6rem}
+.timeline p{margin:0;color:var(--muted)}
+.timeline strong{font-weight:500;color:var(--ink)}
+.contact p{max-width:34rem;color:var(--muted);margin:0 0 1.5rem}
+form{max-width:36rem;display:grid;gap:1rem;margin-bottom:1.5rem}
+label{display:grid;gap:.35rem;font-weight:500;font-size:.95rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:4px;padding:.65rem .8rem;width:100%}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+button.btn{font:inherit;font-weight:500;cursor:pointer;background:transparent;color:var(--ink)}
+button.btn.primary{background:var(--accent);color:var(--on-accent)}
+.err{color:#C0392B;margin:0;min-height:1.2em;font-size:.9rem}
+.hint{font-size:.9rem;color:var(--muted);margin:0}
+.links{margin-top:.5rem}
+@media (max-width:720px){.row{grid-template-columns:1fr}}
+.tg,.f{font:inherit;font-size:.9rem;font-weight:500;cursor:pointer;color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:99px;padding:.3rem .9rem}
+.tg:hover,.f:hover{border-color:var(--accent)}
+.f.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.tg:focus-visible,.f:focus-visible,.chips li:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.status{min-height:1.5rem;color:var(--muted);font-size:.95rem;margin:0 0 1rem}
+.status button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.skills .chips li.has{cursor:pointer;border-color:var(--accent)}
+.skills .chips li.has:hover{background:var(--accent);color:var(--on-accent)}
+nav a.on{color:var(--ink);box-shadow:0 2px 0 var(--accent)}
+.rnote{max-width:34rem;color:var(--muted);margin:0 0 1.5rem}
+.viewer{margin-top:1.5rem;border:1.5px solid var(--line);border-radius:4px;background:var(--surface);overflow:hidden}
+.viewer object{display:block;width:100%;height:80vh;min-height:32rem}
+.viewer p{padding:1.5rem;margin:0}
+footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (max-width:720px){.about,.skills{grid-template-columns:1fr}.proj{grid-template-columns:1fr;gap:.4rem}.hero{padding-top:2.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main"><strong>Subin Biju</strong>
+<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li></ul><button class="tg" id="th" type="button" aria-label="Switch between light and dark theme">Dark mode</button></nav>
+
+<header class="hero">
+<div class="frame"><span class="tag">AI/ML engineer</span><i></i><i></i><i></i><h1>Subin Biju</h1></div>
+<p class="lead">I build AI applications that see, read and decide: computer vision pipelines, local vision-language models and LLM-powered backends.</p>
+<div class="btns"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="#resume">View resume</a><a class="btn" href="mailto:subinbiju88@gmail.com">Email me</a></div>
+</header>
+
+<section id="about"><h2>About</h2>
+<div class="about">
+<div><p>I'm an AI/ML engineer based in Kochi, Kerala, with a B.Sc. in Computer Science and a Post Graduate Diploma in Artificial Intelligence and Machine Learning.</p>
+<p>I learn by building complete systems: from data cleaning and model training to APIs, queues and a working interface. My projects cover computer vision, vision-language models, RAG concepts and AI agents.</p></div>
+<dl class="facts">
+<div><dt>Looking for</dt><dd>Computer Vision, AI/ML and GenAI/LLM application roles</dd></div>
+<div><dt>Education</dt><dd>PG Diploma in AI/ML, iHub School of Learning (2025)<br>B.Sc. Computer Science, Kerala University (2025)</dd></div>
+<div><dt>Languages</dt><dd>English, Malayalam</dd></div>
+</dl></div></section>
+
+<section id="projects"><h2>Projects</h2>
+<div class="filters" role="group" aria-label="Filter projects"><button type="button" class="f on" data-f="all">All</button><button type="button" class="f" data-f="cv">Computer vision</button><button type="button" class="f" data-f="llm">LLM and GenAI</button><button type="button" class="f" data-f="ml">Machine learning</button></div>
+<p class="status" id="st" aria-live="polite"></p>
+<article class="proj" data-tags="cv llm ml"><div class="when">Aug – Sep 2025</div><div>
+<h3>Smart Food Guardian: AI food health scanner</h3>
+<p>A privacy-first pipeline that reads food labels and turns them into personalised health insights, with allergen alerts and goal-based advice. Inference runs fully locally through LM Studio and a Streamlit interface.</p>
+<p class="result">84% accuracy across 181 products</p>
+<ul class="chips"><li>Python</li><li>OpenCV</li><li>Qwen2-VL</li><li>Random Forest</li><li>Streamlit</li></ul></div></article>
+
+<article class="proj" data-tags="llm"><div class="when">Aug – Dec 2024</div><div>
+<h3>AI-Powered Application Generator</h3>
+<p>An LLM-powered system that generates application code from natural-language prompts. FastAPI endpoints hand work to Redis and RQ job queues so AI tasks run in the background, with PostgreSQL storing application data.</p>
+<ul class="chips"><li>FastAPI</li><li>Redis</li><li>RQ</li><li>PostgreSQL</li><li>LLM APIs</li></ul></div></article>
+
+<article class="proj" data-tags="cv"><div class="when">Aug 2023 – Oct 2024</div><div>
+<h3>Safe Heaven: AI crime detection system</h3>
+<p>A computer vision system that analyses live camera feeds for weapons, violence and suspicious activity. It includes real-time face recognition, automated threat detection and alerting for continuous monitoring.</p>
+<ul class="chips"><li>Python</li><li>OpenCV</li><li>Deep Learning</li><li>Flask</li></ul></div></article>
+
+<article class="proj" data-tags="ml"><div class="when">Jul 2025</div><div>
+<h3>Rainfall Forecasting Model</h3>
+<p>A Random Forest Regressor that forecasts rainfall seven days ahead from historical weather data, using 21 engineered time-series lag features and recursive prediction for multi-step forecasts.</p>
+<ul class="chips"><li>Python</li><li>Scikit-learn</li><li>Time series</li></ul></div></article>
+</section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skills">
+<div><h3>AI and machine learning</h3><ul class="chips"><li>Machine Learning</li><li>Deep Learning</li><li>Regression</li><li>Classification</li><li>Clustering</li><li>Random Forest</li><li>CNN</li><li>RNN</li><li>Transformers</li><li>Model deployment</li></ul></div>
+<div><h3>Generative AI</h3><ul class="chips"><li>LLMs and LLM APIs</li><li>Prompt engineering</li><li>Qwen2-VL</li><li>Vision-language models</li><li>AI workflows</li></ul></div>
+<div><h3>AI engineering</h3><ul class="chips"><li>RAG</li><li>Embeddings</li><li>Semantic search</li><li>Vector search</li><li>AI agents</li><li>Multi-agent concepts</li></ul></div>
+<div><h3>Frameworks</h3><ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Keras</li><li>Scikit-learn</li><li>OpenCV</li></ul></div>
+<div><h3>Backend and APIs</h3><ul class="chips"><li>FastAPI</li><li>Flask</li><li>REST APIs</li><li>API integration</li></ul></div>
+<div><h3>Data and infrastructure</h3><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>Redis and RQ</li><li>Docker</li><li>Git and GitHub</li><li>Jupyter</li><li>Google Colab</li><li>LM Studio</li></ul></div>
+</div></section>
+
+<section id="experience"><h2>Experience and education</h2>
+<div class="timeline">
+<div><strong>AI/ML Intern, iHub School of Learning</strong><p>Applied AI/ML to practical projects covering model development, data preprocessing, experimentation and deployment, and contributed to end-to-end AI application development.</p></div>
+<div><strong>Post Graduate Diploma in AI and Machine Learning</strong><p>iHub School of Learning, Edapally, Ernakulam · May – Nov 2025</p></div>
+<div><strong>B.Sc. in Computer Science</strong><p>Kerala University, Sree Narayana College, Cherthala · Aug 2022 – May 2025</p></div>
+</div></section>
+
+<section id="resume"><h2>Resume</h2>
+<p class="rnote">Read it here or keep a copy.</p>
+<div class="btns"><a class="btn primary" id="rv" href="Subin_Biju_Resume.pdf" target="_blank" rel="noopener" aria-controls="rp">View resume</a><a class="btn" href="Subin_Biju_Resume.pdf" download>Download PDF</a></div>
+<div class="viewer" id="rp" hidden><object data="Subin_Biju_Resume.pdf#view=FitH" type="application/pdf" aria-label="Subin Biju resume"><p>Your browser can't show the PDF here. <a href="Subin_Biju_Resume.pdf" target="_blank" rel="noopener">Open it in a new tab</a>.</p></object></div>
+</section>
+
+<section id="contact" class="contact"><h2>Let's talk</h2>
+<p>I'm open to computer vision, AI/ML and GenAI application roles. Send me a message and I'll reply by email.</p>
+<form id="msg" novalidate>
+<div class="row"><label>Your name<input id="n" autocomplete="name" required></label><label>Your email<input id="e" type="email" autocomplete="email" required></label></div>
+<label>Company or role (optional)<input id="c"></label>
+<label>Message<textarea id="m" rows="5" required></textarea></label>
+<p id="err" role="alert" class="err"></p>
+<div class="btns"><button class="btn primary" type="submit">Send message</button><button class="btn" type="button" id="cp">Copy message</button></div>
+<p class="hint">Nothing opens? Copy the message and email <a href="mailto:subinbiju88@gmail.com">subinbiju88@gmail.com</a>.</p>
+</form>
+<div class="btns links"><a class="btn" href="https://github.com/subin298" rel="noopener">GitHub</a><a class="btn" href="https://linkedin.com/in/subin-biju-502373249" rel="noopener">LinkedIn</a></div>
+<a id="mt" href="#" target="_blank" rel="noopener" hidden>mail</a>
+<script>
+(function(){
+var f=document.getElementById('msg'),err=document.getElementById('err');
+function v(id){return document.getElementById(id).value.trim()}
+function body(){var c=v('c');return 'Hi Subin,\n\n'+v('m')+'\n\n'+v('n')+'\n'+v('e')+(c?'\n'+c:'')}
+function ok(){if(!v('n')||!v('m')||!/^\S+@\S+\.\S+$/.test(v('e'))){err.textContent='Enter your name, a valid email and a message.';return false}err.textContent='';return true}
+f.addEventListener('submit',function(ev){ev.preventDefault();if(!ok())return;
+var a=document.getElementById('mt'),c=v('c');
+a.href='mailto:subinbiju88@gmail.com?subject='+encodeURIComponent('Portfolio enquiry'+(c?' - '+c:''))+'&body='+encodeURIComponent(body());
+a.click()});
+document.getElementById('cp').addEventListener('click',function(){if(!ok())return;
+var b=this,t=body();
+function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2000)}
+try{navigator.clipboard.writeText(t).then(done,function(){err.textContent='Copy failed. Select the text and copy it manually.'})}catch(x){err.textContent='Copy failed. Select the text and copy it manually.'}});
+})();
+</script>
+</section>
+<footer>© 2026 Subin Biju · Kochi, Kerala, India</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement,th=document.getElementById('th');
+function dark(){var t=root.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches}
+function lab(){th.textContent=dark()?'Light mode':'Dark mode'}
+th.onclick=function(){root.setAttribute('data-theme',dark()?'light':'dark');lab()};lab();
+var P=[].slice.call(document.querySelectorAll('.proj')),st=document.getElementById('st'),fb=[].slice.call(document.querySelectorAll('.f'));
+function show(fn,msg,key){var first=true;P.forEach(function(a){var m=fn(a);a.hidden=!m;a.classList.toggle('nb',m&&first);if(m)first=false});
+fb.forEach(function(b){b.classList.toggle('on',b.dataset.f===key)});
+st.innerHTML='';if(msg){st.appendChild(document.createTextNode(msg+' '));var c=document.createElement('button');c.type='button';c.textContent='Show all';c.onclick=function(){show(function(){return true},'','all')};st.appendChild(c)}}
+fb.forEach(function(b){b.onclick=function(){var k=b.dataset.f;show(function(a){return k==='all'||a.dataset.tags.split(' ').indexOf(k)>-1},'',k)}});
+var chips=P.map(function(a){return [].slice.call(a.querySelectorAll('.chips li')).map(function(l){return l.textContent.toLowerCase()})});
+function match(a,t){return chips[P.indexOf(a)].some(function(c){return c.indexOf(t)>-1||t.indexOf(c)>-1})}
+[].slice.call(document.querySelectorAll('.skills .chips li')).forEach(function(l){var t=l.textContent.toLowerCase();
+if(!P.some(function(a){return match(a,t)}))return;
+l.classList.add('has');l.tabIndex=0;l.setAttribute('role','button');l.title='Show projects that use this';
+function go(){show(function(a){return match(a,t)},'Projects using '+l.textContent+'.','');document.getElementById('projects').scrollIntoView()}
+l.onclick=go;l.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}}});
+show(function(){return true},'','all');
+var rv=document.getElementById('rv'),rp=document.getElementById('rp');
+if(rv&&rp&&navigator.pdfViewerEnabled&&matchMedia('(min-width:721px)').matches){
+rv.setAttribute('role','button');rv.setAttribute('aria-expanded','false');rv.removeAttribute('target');
+rv.onclick=function(e){e.preventDefault();var open=rp.hidden;rp.hidden=!open;rv.setAttribute('aria-expanded',String(open));rv.textContent=open?'Hide resume':'View resume';if(open)rp.scrollIntoView({block:'nearest'})};
+rv.onkeydown=function(e){if(e.key===' '){e.preventDefault();rv.click()}};
+document.querySelectorAll('a[href="#resume"]').forEach(function(a){if(a.closest('.hero'))a.addEventListener('click',function(){if(rp.hidden)rv.click()})})}
+var links=[].slice.call(document.querySelectorAll('nav ul a'));
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section[id]').forEach(function(x){o.observe(x)})}
+})();
+</script>
+</body>
+</html>
