@@ -170,10 +170,17 @@ var f=document.getElementById('msg'),err=document.getElementById('err');
 function v(id){return document.getElementById(id).value.trim()}
 function body(){var c=v('c');return 'Hi Subin,\n\n'+v('m')+'\n\n'+v('n')+'\n'+v('e')+(c?'\n'+c:'')}
 function ok(){if(!v('n')||!v('m')||!/^\S+@\S+\.\S+$/.test(v('e'))){err.textContent='Enter your name, a valid email and a message.';return false}err.textContent='';return true}
-f.addEventListener('submit',function(ev){ev.preventDefault();if(!ok())return;
-var a=document.getElementById('mt'),c=v('c');
-a.href='mailto:subinbiju88@gmail.com?subject='+encodeURIComponent('Portfolio enquiry'+(c?' - '+c:''))+'&body='+encodeURIComponent(body());
-a.click()});
+f.addEventListener('submit',function(ev){
+ev.preventDefault();
+if(!ok())return;
+var c=v('c');
+var subject='Portfolio enquiry'+(c?' - '+c:'');
+var url='https://mail.google.com/mail/?view=cm&fs=1'
++'&to=subinbiju88@gmail.com'
++'&su='+encodeURIComponent(subject)
++'&body='+encodeURIComponent(body());
+window.open(url,'_blank');
+});
 document.getElementById('cp').addEventListener('click',function(){if(!ok())return;
 var b=this,t=body();
 function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2000)}
